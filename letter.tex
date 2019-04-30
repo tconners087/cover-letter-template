@@ -1,0 +1,141 @@
+\documentclass[12p4]{article}
+
+\def\myauthor{Taylor Conners}
+\def\mytitle{tconn-Resume}
+\def\myemail{tconner0@gmail.com}
+\def\myphone{704-557-6017}
+\def\myweb{tconners087}
+\def\mykeywords{
+	taylor conners, 
+	resume, 
+	curriculum, 
+	vita, 
+	curriculum vita, 
+	cv, 
+	taylor, 
+	conners, 
+	tec
+}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% Packages
+%----------------------------------------------------------------------------------------------------------------------------
+
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage[no-math]{fontspec}
+\usepackage[margin=1.000in,top=1.25in,right=1in,left=1in]{geometry}%HERE
+\usepackage{fontawesome}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage[
+	ocgcolorlinks,
+	urlcolor={[rgb]{0,0,0.54}},
+	unicode,
+	plainpages=false,
+	pdfpagelabels,
+	pdftitle={\mytitle},
+	pdfauthor={\myauthor},
+	pdfkeywords={\mykeywords}
+]{hyperref}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% Environment
+%----------------------------------------------------------------------------------------------------------------------------
+
+\setlength\parindent{15pt}
+
+
+\newcommand{\mhead}[1]{\leavevmode\marginpar{\sffamily\footnotesize #1}}
+\newcommand{\rdate}[1]{{\addfontfeature{Numbers=OldStyle} \hfill \sffamily\footnotesize #1}}
+\renewcommand{\date}[1]{{\addfontfeature{Numbers=OldStyle} #1}}
+\renewcommand{\labelitemi}{-} 
+
+\setmainfont[
+	Ligatures={TeX,Common},
+  	BoldFont={AGaramondPro-Semibold},
+	ItalicFont={AGaramondPro-Italic},
+	BoldItalicFont={AGaramondPro-SemiboldItalic}
+]{Adobe Garamond Pro}
+\setsansfont[
+  	Ligatures={TeX,Common},
+  	Letters=SmallCaps,
+  	Color=660000,
+]{Adobe Garamond Pro}
+\setmonofont[Scale=1]{FontAwesome}
+\reversemarginpar
+\setlength\marginparwidth{0.85in}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% PAGE STYLE
+%----------------------------------------------------------------------------------------------------------------------------
+\pagestyle{fancy} \setlength\headwidth{6.5in}
+\rhead{\textsc{taylor e.~conners—\thepage{} of \pageref*{LastPage}}} \cfoot{}
+\thispagestyle{empty}
+
+%----------------------------------------------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------------------------------------------
+\setlength{\headsep}{0.1625in}
+
+\begin{flushright}
+{\Huge\hfill
+	{\textsc{
+		{\addfontfeature{Style=TitlingCaps}T}aylor
+		{\addfontfeature{Style=TitlingCaps}E}.~%
+		{\addfontfeature{Style=TitlingCaps}C}onners}%
+	}
+}\\
+\rule{9cm}{0.15pt}
+\end{flushright}
+
+
+
+\hfill
+\begin{minipage}[t]{2.75in}
+	{
+		%\flushleft{Address:}
+		%\begin{footnotesize}
+		%\hfill 3570 Toringdon Way \\
+		%\hfill Apartment 1079 \\
+		%\hfill Charlotte, NC~~28277
+		%\end{footnotesize}
+	}
+	{
+		\flushleft{Contact:}
+		\begin{footnotesize}
+		\hfill \href{tel:\myphone}{\myphone} \\ 
+		\hfill \href{mailto:\myemail}{\myemail} \\
+		\hfill \href{https://www.github.com/\myweb}{\faGithub}~-~\href{https://www.linkedin.com/in/\myweb}{\faLinkedin}
+		\end{footnotesize}
+	}
+\end{minipage}
+
+\medskip
+\medskip
+%----------------------------------------------------------------------------------------------------------------------------
+% BODY
+%----------------------------------------------------------------------------------------------------------------------------
+
+Dear <employer>, \\
+\doublespace
+\indent\lipsum[1-4]
+
+\begin{flushright}
+\begin{minipage}[t]{2.75in}
+	\flushleft{Sincerely,} \\
+	\medskip
+	{\LARGE
+		{
+			{\addfontfeature{Style=TitlingCaps}T}aylor
+			{\addfontfeature{Style=TitlingCaps}C}onners%
+		}
+	}
+\end{minipage}
+\end{flushright}
+
+
+\end{document}
